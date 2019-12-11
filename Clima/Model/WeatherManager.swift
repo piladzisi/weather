@@ -14,10 +14,12 @@ protocol WeatherManagerDelegate {
     func didFailWithError(error: Error)
 }
 
+let credentials = Credentials()
+let appid = credentials.appid
 
 struct WeatherManager {
     
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=5d3c281f8b7ece9515e8f1dac20c6b1b&units=metric"
+    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=\(appid)&units=metric"
     
     var delegate: WeatherManagerDelegate?
     
