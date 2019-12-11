@@ -14,8 +14,7 @@ protocol WeatherManagerDelegate {
     func didFailWithError(error: Error)
 }
 
-let credentials = Credentials()
-let appid = credentials.appid
+let appid = Credentials().appid
 
 struct WeatherManager {
     
